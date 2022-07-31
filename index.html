@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/795f11408a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="mainContainer">
+      <form class="search-form" id="search-form">
+      <div class="row containerCity">
+        <div class="col">Humidity: <span id="humidity"></span>%</div>
+        <div class="col">Wind: <span id="wind"></span> km/h</div>
+        <div class="col"></div>
+      </div>
+      <div class="enterCity">
+        <input 
+        type="enterCity" 
+        placeholder="Enter your city" 
+        autofocus="on"
+        autocomplete="off"
+        id="city-input"/>
+        <input class="buttonGo" type="submit" value="Go" />
+        <button type="button" class="btn btn-secondary" id="buttonCurrent">Current</button>
+      </div>
+
+      <div class="row currentCityContainer">
+        <div class="col">
+          <div class="nameCity"
+          <strong id="city">New York</strong>
+        </div>
+          <br />
+          <p id="weater-description">Partly cloudy</p>
+          <p id="date"></p>
+         
+        </div>
+
+        <div class="col mainTemperature">
+          <span class="temperature" id="temperature">19</span
+            ><span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-cloud-sun mainSun"></i>
+        </div>
+      </div>
+      <br />
+      <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+          <div class="col text-center">
+            <div class="p-3 border bg-light">
+              Mon
+              <i class="fa-solid fa-cloud-sun">
+                <br />
+                19°C
+              </i>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="p-3 border bg-light">
+              Tue <i class="fa-solid fa-cloud"><br />22°C</i>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="p-3 border bg-light">
+              Wed <i class="fa-solid fa-cloud-rain"><br />18°C</i>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="p-3 border bg-light">
+              Thu <i class="fa-solid fa-cloud-sun"><br />21°C</i>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="p-3 border bg-light">
+              Fri <i class="fa-solid fa-sun"><br />24°C</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
